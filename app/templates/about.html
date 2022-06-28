@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>About Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <style>
+        .nav-link {
+            color:aliceblue;
+        }
+    </style>
+    </head>
+  <body>
+
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid" style="background-color:rgb(0, 0, 110)">
+          <img src="{{ url_for('static', filename='img/acgLogo.png') }}" alt="Advanced Capital Group"
+            style="width:100px;height:100px;">
+    
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="/data">Data</a>
+            </li>     
+            <li class="nav-item">
+              <a class="nav-link" href="/">Log Out</a>
+            </li>
+           </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h3>What is the graph meant to tell us?</h3>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col">
+                <p>
+                    The graph calculates five different retirment plans and their respective annual withdrawals based on the selected return stream. 
+                    The three main lines of interest are the purple, green, and red lines. Respectively these lines represent the maximum, average, 
+                    and minimum additonal contribution by percent of salary to make the employee's average annual withdrawal equal to or slightly greater than 
+                    the annual value of the calculated pension plan. The additonal contribution percentages are calculated by finding the minimum additional contribution required to make 
+                    average annual withdrawal equal to or greater than the annual value of the pension plan for each 35 year return period from 1928-2021, for each given portfolio weight
+                    (e.q. 50% equity, 50% bonds). After calculating contribtution percent for all possible periods for a given portfolio weight the percentages are averaged. Once all
+                    portfolio weights have a corresponding average additional contribution percent to equate the base 401(k) to the calculated pension plan, the maximum value among
+                    them is selected along with the minimum value. Also, the contribution percents are averaged to find the average employer contribution percent required to equate the
+                    base 401(k) to the calculated pension plan independent of portfolio weight. Finally, with these three values, three new 401(k)s are calculated and graphed.
+                </p>
+            </div>
+        </div>
+        <hr>
+    </div>
+
+
+   </body>
+</html>
